@@ -6,16 +6,21 @@
         <div class="container">
             <div class="row">
                 <h4 class="series-title"> CURRENT SERIES </h4>
-                @foreach ($cards as $key => $card)
+
+                @foreach ($comics as $key => $comic)
                     <div class="col-6 col-md-3 col-lg-2">
-                        <a href="{{route('detail_fumetto', ['titolo' => $key])}}" class="w-100">
+                        <a href="{{ route('detail_fumetto', $comic['id'] - 1) }}" class="w-100">
                             <div class="my-card">
-                                <img src="{{ $card['thumb'] }}" alt="{{ $card['title'] }}" class="img-fluid">
-                                <p class="text-white"> {{ $card['title'] }}</p>
+                                <img src="{{ $comic['thumb'] }}" alt="{{ $comic['title'] }}" class="img-fluid">
+                                <p class="text-white">
+                                    {{ $comic['title']}}
+                                   {{-- <h6 id="prezzo">{{ $comic['price']}}€</h6> --}}
+                                </p>
                             </div>
                         </a>
                     </div>
                 @endforeach
+
             </div>
             <a class='but-load' href="#"> LOAD MORE </a>
         </div>
