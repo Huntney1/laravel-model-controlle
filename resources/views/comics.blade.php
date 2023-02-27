@@ -14,7 +14,7 @@
                                 <img src="{{ $comic['thumb'] }}" alt="{{ $comic['title'] }}" class="img-fluid">
                                 <p class="text-white">
                                     {{ $comic['title']}}
-                                   {{-- <h6 id="prezzo">{{ $comic['price']}}€</h6> --}}
+                                   <p id="prezzo">{{ $comic['price']}}€</p>
                                 </p>
                             </div>
                         </a>
